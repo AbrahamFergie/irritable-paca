@@ -135,21 +135,21 @@ Board.prototype.get_group = function(i, j) {
     let visited_list = []; // for returning
     let queue = [[i, j]];
     let count = 0;
-
+    let self = this
+    let identifyGroup = function(n) {
+        let state = self.board[n[0]][n[1]];
+        if (state === Board.EMPTY)
+            count++;
+        if (state === color)
+            queue.push([n[0], n[1]]);
+    }
     while (queue.length > 0) {
         let stone = queue.pop();
         if (visited[stone])
             continue;
 
         let neighbors = this.get_adjacent_intersections(stone[0], stone[1]);
-        let self = this;
-        _.each(neighbors, function(n) {
-            let state = self.board[n[0]][n[1]];
-            if (state === Board.EMPTY)
-                count++;
-            if (state === color)
-                queue.push([n[0], n[1]]);
-        });
+        _.each( identifyGroup(neighbors))
 
         visited[stone] = true;
         visited_list.push(stone);
@@ -161,4 +161,4 @@ Board.prototype.get_group = function(i, j) {
     };
 }
 
-module.exports = Board
+export default Board

@@ -14,12 +14,12 @@ let BoardIntersection = React.createClass({
       left: this.props.col * GRID_SIZE
     }
     let classes = "intersection"
-    if( this.props.color != Board.EMPTY )
-      classes += this.props.color == Board.BLACK ? "black" : "white"
+    if( this.props.color !== Board.EMPTY )
+      classes += this.props.color === Board.BLACK ? "black" : "white"
 
     return (
-      <div onClick = { this.handleClick }
-        className = {classes} style = {style}></div>
+      <div onClick={ this.handleClick }
+        className={classes} style={style}></div>
     )
   }
 })
@@ -40,11 +40,11 @@ let BoardView = React.createClass({
       width: this.props.board.size * GRID_SIZE,
       height: this.props.board.size * GRID_SIZE
     }
-   return <div style = { style } id = "board">{intersections}</div>
+   return <div style={ style } id="board">{intersections}</div>
   }
 })
 
-let AletView = React.createClass({
+let AlertView = React.createClass({
   render: () => {
     let text = ""
     if( this.props.board.in_atari )
@@ -52,7 +52,7 @@ let AletView = React.createClass({
     else if( this.props.board.attempted_suicide )
       text = "SUICIDE"
 
-    return ( <div id = "alerts"></div> )
+    return ( <div id="alerts">{text}</div> )
   }
 })
 
@@ -61,8 +61,8 @@ let PassView = React.createClass({
     this.props.board.pass()
   },
   render: () => {
-    return ( <input id = "pass-btn" type = "button" value = "Pass"
-      onClick = { this.handleClick } /> )
+    return ( <input id="pass-btn" type="button" value="Pass"
+      onClick={ this.handleClick } /> )
   }
 })
 
@@ -76,10 +76,10 @@ export const ContainerView = React.createClass({
   render: () => {
     return (
       <div>
-        <AlertView board = { this.state.board } />
-        <PassView board = { this.state.board } />
-        <BoardView board = { this.state.board }
-          onPlay = { this.onBoardUpdate.bind( this )} />
+        <AlertView board={ this.state.board } />
+        <PassView board={ this.state.board } />
+        <BoardView board={ this.state.board }
+          onPlay={ this.onBoardUpdate.bind( this )} />
       </div>
     )
   }
