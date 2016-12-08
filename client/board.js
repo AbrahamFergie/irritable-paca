@@ -126,7 +126,7 @@ Board.prototype.get_adjacent_intersections = function(i , j) {
  * coordinates of the group's members.
  */
 Board.prototype.get_group = function(i, j) {
-    debugger
+    
     let color = this.board[i][j];
     if (color === Board.EMPTY)
         return null;

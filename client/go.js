@@ -4,16 +4,18 @@ import Board from "./board"
 let GRID_SIZE = 40
 
 let BoardIntersection = React.createClass({
+
   handleClick () {
     if ( this.props.board.play( this.props.row, this.props.col ))
       this.props.onPlay()
   },
   render () {
+
     let style = {
       top: this.props.row * GRID_SIZE,
       left: this.props.col * GRID_SIZE
     }
-    let classes = "intersection"
+    let classes = "intersection "
     if( this.props.color !== Board.EMPTY )
       classes += this.props.color === Board.BLACK ? "black" : "white"
 
@@ -26,16 +28,17 @@ let BoardIntersection = React.createClass({
 
 let BoardView = React.createClass({
   render () {
+
     let intersections = []
     for( let i = 0; i < this.props.board.size; i++ )
       for( let j = 0; j < this.props.board.size; j++ )
         intersections.push(
           <BoardIntersection
-          board={ this.props.board}
+          board={ this.props.board }
           color={ this.props.board.board[i][j] }
-          row={ i}
-          col={ j}
-          onPlay={ this.props.onPlay} />
+          row={i}
+          col={j}
+          onPlay={ this.props.onPlay } />
         )
     let style = {
       width: this.props.board.size * GRID_SIZE,
@@ -69,9 +72,10 @@ let PassView = React.createClass({
 
 export const ContainerView = React.createClass({
   getInitialState () {
-    return { "board":  new Board(GRID_SIZE) }
+    return { "board":  new Board(19) }
   },
   onBoardUpdate () {
+
     this.setState({ "board": this.state.board })
   },
   render () {
