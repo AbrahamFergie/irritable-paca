@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import {ContainerView} from './go'
 
-export default class App extends Component {
+
+
+ class App extends Component {
   constructor(props){
     super(props)
   }
   render() {
-    return <div><ContainerView /></div>
-  }
+    return ( <div><h2>test</h2></div>
+  )
+ }
 }
-
-ReactDOM.render(<App />, document.getElementById('app'))
+export default App

@@ -8,6 +8,7 @@
 
 #board {
     position: relative;
+    border: 20px groove lime;
 }
 
 .intersection {
