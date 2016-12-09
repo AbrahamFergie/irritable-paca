@@ -4,7 +4,7 @@ import ChatStore from './ChatStore'
 import ChatActions from './ChatActions'
 
 
-class Chat extends React.Component({
+export const Chat = React.Component({
 
   propTypes: {
     io: React.PropTypes.object.isRequired,

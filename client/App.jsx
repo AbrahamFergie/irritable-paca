@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import {ContainerView} from './go'
+import ReactDOM from 'react-dom'
+
+
+const Htmlroot = document.getElementById( 'app' )
 
 
 
@@ -8,8 +12,9 @@ import {ContainerView} from './go'
     super(props)
   }
   render() {
-    return ( <div><h2>test</h2></div>
+    return ( <div><ContainerView/></div>
+
   )
  }
 }
-export default App
+ReactDOM.render( <App />, Htmlroot )

@@ -8,7 +8,11 @@
 
 #board {
     position: relative;
-    border: 20px groove lime;
+    border: 10px solid transparent;
+    border-image: url(http://img12.deviantart.net/954e/i/2008/134/b/b/border_iii_by_struckdumb.jpg) 30 round;
+    background-image: url(http://www.mashbout.com/wp-content/uploads/2013/06/Blank_Go_board.png);
+    background-size: contain;
+    background-position: center;
 }
 
 .intersection {
