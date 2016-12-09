@@ -17,7 +17,7 @@ const socket = require('./socket.js');
 const debug = require('debug')('new-react-app:server')
 const http = require('http')
 const server = http.createServer(app)
-const port = normalizePort(process.env.PORT || '3000')
+const port = normalizePort(process.env.PORT || '5000')
 
 app.set('port', port)
 server.listen(port)

@@ -2,6 +2,12 @@
   "name": "GoChat",
   "version": "0.1.0",
   "private": true,
+  "author": "Najee and Abraham",
+  "license": "MIT",
+  "engines": {
+    "node": "*",
+    "npm": "3.10.3"
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
