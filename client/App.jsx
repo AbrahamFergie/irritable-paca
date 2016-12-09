@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {ContainerView} from './go'
 import ReactDOM from 'react-dom'
+import {ChatApp} from './Chat'
 
 
 const Htmlroot = document.getElementById( 'app' )
@@ -12,7 +13,8 @@ const Htmlroot = document.getElementById( 'app' )
     super(props)
   }
   render() {
-    return ( <div><ContainerView/></div>
+    return ( <div><ContainerView/>
+                  <ChatApp/></div>
 
   )
  }
