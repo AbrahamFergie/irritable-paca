@@ -44,14 +44,16 @@
     z-index: -1;
 }
 
-.intersection.black, .intersection.white {
-    border: 1px solid #000;
-}
 
 .intersection.black {
-    background-color: #444;
+    background-image: url(https://openclipart.org/image/2400px/svg_to_png/161287/Metal-Sphere.png);
+    background-size: cover;
+    background-position: center;
+
 }
 
 .intersection.white {
-    background-color: #eee;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f8/Shiny_steel_ball.png);
+    background-size: contain;
+    background-position: center;
 }
