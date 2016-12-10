@@ -8,7 +8,7 @@ module.exports = {
   output: {
     publicPath: '/',
     path: __dirname+'/public',
-    filename: 'app.jsx'
+    filename: 'bundle.js'
   },
   debug: true,
   devtool: 'source-map',
