@@ -36,7 +36,7 @@ app.use(cookieParser())
 const compiler = webpack(config)
 const middleware = webpackMiddleware(compiler, {
   publicPath: config.output.publicPath,
-  contentBase: 'src',
+  contentBase: 'client',
   stats: {
     colors: true,
     hash: false,
