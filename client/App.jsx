@@ -13,9 +13,10 @@ const Htmlroot = document.getElementById( 'app' )
     super(props)
   }
   render() {
-    return ( <div><ContainerView/>
-                  <ChatApp/></div>
-
+    return ( <div>
+              <ChatApp/>
+              <ContainerView/>
+             </div>
   )
  }
 }
