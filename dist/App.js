@@ -6,13 +6,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _go = require('./go');
+var _go = require('./go.jsx');
 
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Chat = require('./Chat');
+var _Chat = require('./Chat.jsx');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
