@@ -46,7 +46,7 @@
   },
   "scripts": {
     "start": "node ./app",
-    "build": "babel src -d dist",
+    "build": "babel client -d dist",
     "build:client": "webpack"
   }
 }

@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import {ContainerView} from './go'
+import {ContainerView} from './go.jsx'
 import ReactDOM from 'react-dom'
-import {ChatApp} from './Chat'
+import {ChatApp} from './Chat.jsx'
 
 
 const Htmlroot = document.getElementById( 'app' )
-
-
 
  class App extends Component {
   constructor(props){
@@ -14,8 +12,8 @@ const Htmlroot = document.getElementById( 'app' )
   }
   render() {
     return ( <div>
-              <ChatApp/>
-              <ContainerView/>
+              <ChatApp />
+              <ContainerView />
              </div>
   )
  }
